@@ -1,0 +1,16 @@
+{
+  "Week 1": [
+    {
+      "title": "an article on flask",
+      "type": "article",
+      "url": "https://flask.palletsprojects.com/en/stable/"
+    }
+  ],
+  "Week 2": [
+    {
+      "title": "a video on flask",
+      "type": "video",
+      "url": "https://www.youtube.com/watch?v=Z1RJmh_OqeA"
+    }
+  ]
+}
