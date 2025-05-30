@@ -6,32 +6,32 @@
 <body>
     <center><h1>Course Viewer</h1>
 
-    <h3>Add contents</h3>
-    <form method="POST" >
-        Week <input name ="week"><br><br>
-        Title<input name ="title" ><br><br>
-        <select name ="type"><option>video</option><option>article</option></select><br><br>
-        URL <input name ="url" ><br><br>
-        <button type = "submit" formaction="/add"> Add </button>
-    </form>
+        <h3>Add contents</h3>
+        <form method="POST" >
+            Week <input name ="week"><br><br>
+            Title<input name ="title" ><br><br>
+            Type (video or article) <input name ="type"> <br><br>
+            URL <input name ="url" ><br><br>
+            <button type = "submit" formaction="/add"> Add </button>
+        </form>
     
     <br><br><h3> Delete contents</h3>
-    <form method ="POST" >
-        Week <input name ="week"><br><br>
-        Title <input name ="title"><br><br>
-        <button type ="Submit" formaction="/delete"> delete </button>
-    </form>
+        <form method ="POST" >
+            Week <input name ="week"><br><br>
+            Title <input name ="title"><br><br>
+            <button type ="Submit" formaction="/delete"> delete </button>
+        </form>
         
 
     <h3>Modules</h3>
-    {% for week, items in modules.items() %}
-        <h4>{{ week }}</h4>
-        <ul>
-            {% for r in items %}
-                <li>{{ r.title }} - <a href ="{{ r.url }}"> {{ r.type }} </a></li>
-            {% endfor %}
-        </ul>
-    {% endfor %}
+        {% for week, items in modules.items() %}
+            <h4>{{ week }}</h4>
+            <ul>
+                {% for r in items %}
+                    <li>{{ r.title }} - <a href ="{{ r.url }}"> {{ r.type }} </a></li>
+                {% endfor %}
+            </ul>
+        {% endfor %}
     
     </center>
 </body>
