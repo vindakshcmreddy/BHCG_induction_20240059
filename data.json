@@ -4,6 +4,11 @@
       "title": "an article on flask",
       "type": "article",
       "url": "https://flask.palletsprojects.com/en/stable/"
+    },
+    {
+      "title": "A description of task",
+      "type": "article",
+      "url": "https://docs.google.com/document/d/1xICkn64ucaLipm_YmQt6cL-opEZT6ivgzxkrxoqanfU/edit?tab=t.0"
     }
   ],
   "Week 2": [
