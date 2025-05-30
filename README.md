@@ -17,3 +17,6 @@ use POST
 enter the data using form data option in body. the keys are :
 week:Week 1
 title:a video
+
+
+A screen shot of postman testing add and delete is also included in repo.
