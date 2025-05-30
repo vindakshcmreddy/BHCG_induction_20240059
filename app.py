@@ -12,6 +12,7 @@ def read_data():
     with open(DATA_FILE) as sample:
         return json.load(sample)
 
+#writing data into the json file
 def write_data(data):
     with open(DATA_FILE, 'w') as sample:
         json.dump(data, sample, indent=2)
@@ -29,7 +30,7 @@ def add_resource():
     url = request.form.get('url')
 
     if not week or not title or not res_type or not url:
-        return "Missing data", 400
+        return "Enter all the fields", 400
 
     data = read_data()
     resource = {
@@ -38,6 +39,7 @@ def add_resource():
         "url": url
     }
 
+    #if the entered week does not exits it creates a new week
     if week not in data:
         data[week] = []
     data[week].append(resource)
@@ -48,6 +50,7 @@ def add_resource():
 def delete_resource():
     week = request.form.get('week')
     title = request.form.get('title')
+    res_type = request.form.get('type')
 
     data = read_data()
     if week in data:
